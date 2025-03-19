@@ -17,9 +17,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -67,7 +69,33 @@ fun Profile() {
                         .align(Alignment.BottomCenter)
                         .background(Color.White)
                 )
+                Row(
+                    modifier = Modifier
+                        .padding(top = 16.dp, start = 8.dp, end = 8.dp)
+                        .fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween
 
+                ) {
+                    Image(
+                        imageVector = ImageVector.vectorResource(id = R.drawable.ic_edit_icon),
+                        contentDescription = "Edit",
+                        modifier = Modifier
+                            .size(20.dp)
+                    )
+
+                    Text(
+                        text = "Profile".uppercase(),
+                        modifier = Modifier,
+                        color = Color.White,
+                    )
+
+                    Image(
+                        imageVector = ImageVector.vectorResource(id = R.drawable.ic_logout_icon),
+                        contentDescription = "Logout",
+                        modifier = Modifier
+                            .size(20.dp)
+                    )
+                }
 
                 Card(
                     modifier = Modifier
