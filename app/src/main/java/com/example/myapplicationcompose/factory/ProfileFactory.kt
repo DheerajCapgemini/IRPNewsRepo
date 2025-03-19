@@ -11,7 +11,7 @@ object ProfileFactory {
         email = "dh123@gmail.com",
         telephone = "+917509854751",
         gender = " Male ",
-        avatarUrl = R.drawable.ic_settings,
+        avatarUrl = R.drawable.news_icon,
         customerNo = 12345678
     )
 }
